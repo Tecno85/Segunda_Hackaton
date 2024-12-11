@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgroPlan - Planificador de Cultivos</title>
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/main.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>🌱 AgroPlan</h1>
+      <p>Planificador interactivo para agricultores</p>
+    </header>
+    <main>
+      <!-- Botón para mostrar el calendario -->
+      <section id="calendarSection" class="section active">
+        <div id="calendar"></div>
+        <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js"></script>
+        <script src="script.js"></script>
+      </section>
+
+      <!-- Sección de gestión de cultivos -->
+      <section id="gestion-cultivos">
+        <h2>Gestionar Cultivos</h2>
+        <ul id="lista-cultivos"></ul>
+        <form id="form-nuevo-cultivo">
+          <input
+            type="text"
+            id="nuevo-cultivo"
+            placeholder="Nombre del cultivo"
+            required
+          />
+          <select id="estado-cultivo" title="estado">
+            <option value="Activo">Activo</option>
+            <option value="Inactivo">Inactivo</option>
+          </select>
+          <button type="submit">Agregar Cultivo</button>
+        </form>
+      </section>
+
+      <!-- Sección para planificar siembras -->
+      <section id="planificar-siembras">
+        <h2>Planificar Siembra</h2>
+        <form id="form-planificar">
+          <select id="cultivo-select" required title="cultivo">
+            <option value="">Selecciona un cultivo</option>
+          </select>
+          <input
+            type="number"
+            id="area"
+            placeholder="Área a sembrar (ha)"
+            required
+          />
+          <input type="date" id="fecha" required title="date" />
+          <button type="submit">Planificar</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>© 2024 AgroPlan. Todos los derechos reservados.</p>
+    </footer>
+    <script src="./js/script.js"></script>
+    <script src="./js/davi.js"></script>
+  </body>
+</html>
