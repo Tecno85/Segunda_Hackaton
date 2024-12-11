@@ -3,72 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AgroPlan - Planificador de Cultivos</title>
-    <link rel="stylesheet" href="./css/style.css" />
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/main.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>Agro_Plan</title>
+    <link rel="stylesheet" href="./css/lorena.css" />
   </head>
   <body>
     <header>
-      <h1>🌱 AgroPlan</h1>
-      <p>Planificador interactivo para agricultores</p>
+      <img src="img/logo.png" alt="Logo" />
+      <h1>Agro Plan</h1>
     </header>
-    <main>
-      <!-- Botón para mostrar el calendario -->
-      <section id="calendarSection" class="section active">
-        <div id="calendar"></div>
-        <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/index.global.min.js"></script>
-        <script src="script.js"></script>
+
+    <nav>
+      <a href="#fotos">Fotos</a>
+      <a href="ivan.html">Agro Plan</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="container">
+      <section id="fotos" class="carousel">
+        <img src="img/carrusel1.jpg" alt="Imagen 1" class="active" />
+        <img src="img/carrusel2.jpg" alt="Imagen 2" />
+        <img src="img/carrusel3.jpg" alt="Imagen 3" />
+        <div class="carousel-buttons">
+          <button id="prev">&#8249;</button>
+          <button id="next">&#8250;</button>
+        </div>
       </section>
 
-      <!-- Sección de gestión de cultivos -->
-      <section id="gestion-cultivos">
-        <h2>Gestionar Cultivos</h2>
-        <ul id="lista-cultivos"></ul>
-        <form id="form-nuevo-cultivo">
-          <input
-            type="text"
-            id="nuevo-cultivo"
-            placeholder="Nombre del cultivo"
-            required
-          />
-          <select id="estado-cultivo" title="estado">
-            <option value="Activo">Activo</option>
-            <option value="Inactivo">Inactivo</option>
-          </select>
-          <button type="submit">Agregar Cultivo</button>
-        </form>
+      <section id="fotos" class="photos">
+        <img src="img/arroz.webp" alt="Foto 1" />
+        <img src="img/siembra.avif" alt="Foto 2" />
+        <img src="img/maiz.webp" alt="Foto 3" />
       </section>
 
-      <!-- Sección para planificar siembras -->
-      <section id="planificar-siembras">
-        <h2>Planificar Siembra</h2>
-        <form id="form-planificar">
-          <select id="cultivo-select" required title="cultivo">
-            <option value="">Selecciona un cultivo</option>
-          </select>
-          <input
-            type="number"
-            id="area"
-            placeholder="Área a sembrar (ha)"
-            required
-          />
-          <input type="date" id="fecha" required title="date" />
-          <button type="submit">Planificar</button>
-        </form>
+      <section id="informacion" class="info">
+        <h2>Sobre Nosotros</h2>
+        <p>
+          Los cultivos pueden clasificarse de varias formas, según la especie
+          cultivada, el uso, la estacionalidad, la dependencia del agua. En
+          Colombia, algunos de los cultivos más destacados son la palma de
+          aceite, los frutales, el arroz, la caña de azúcar, el cacao, las
+          hortalizas, la yuca, y el plátano.
+        </p>
       </section>
-    </main>
-    <footer>
-      <p>© 2024 AgroPlan. Todos los derechos reservados.</p>
+    </div>
+
+    <footer id="contacto">
+      <p>Contacto: Lorena Díaz, Ivan Madrid, Samyr Pérez, David Vargas</p>
+      <p>Talento Tech</p>
+      <p>&copy; 2024 Agro Plan</p>
     </footer>
-    <script src="./js/script.js"></script>
-    <script src="./js/davi.js"></script>
   </body>
+  <script src="./js/lorena.js"></script>
 </html>
